@@ -1,0 +1,31 @@
+class Car{
+    park(){
+        return 'stopped';
+    }
+
+    drive(){
+        return 'vroom';
+    }
+}
+
+let car;
+beforeEach(() => {
+     car = new Car();
+});
+
+describe('Car class', () => {
+
+    it('test for park function',() => {
+
+        
+        assert.equal(car.park(), 'stopped');          // we passed car.park() and the value we think it should return.
+
+    } );
+
+    it('test for drive function',() => {
+
+        assert.equal(car.drive(), 'vroom');         
+
+    } );
+
+});
