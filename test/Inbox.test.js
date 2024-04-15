@@ -17,7 +17,7 @@ let inbox;
     inbox = await new web3.eth.Contract(JSON.parse(interface))
       .deploy({ data: bytecode , arguments: ['Hi there!']})
       .send ({ from: accounts[0], gas: '1000000'});
-});                                                            //0x00bA7acaa8aDdFdf014315A6b81B963De1F46d58
+});                                                            
 
 describe('Inbox', ()=>{
     it('deploys a contract' ,  ()=>{
